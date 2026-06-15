@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechElites - Computer Training</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f5f9ff;
+            color:#222;
+        }
+
+        /* HEADER */
+
+        header{
+            background:linear-gradient(to right,#7cc7ff,#ffe082);
+            padding:80px 20px;
+            text-align:center;
+        }
+
+        header h1{
+            font-size:65px;
+            color:#003366;
+            margin-bottom:20px;
+            letter-spacing:2px;
+        }
+
+        header p{
+            font-size:24px;
+            color:#333;
+            line-height:1.8;
+            max-width:1000px;
+            margin:auto;
+        }
+
+        /* NAVBAR */
+
+        nav{
+            background:#003366;
+            padding:18px;
+            text-align:center;
+        }
+
+        nav a{
+            text-decoration:none;
+            color:white;
+            margin:0 20px;
+            font-size:18px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#ffe082;
+        }
+
+        /* HERO */
+
+        .hero{
+            background:#eef7ff;
+            padding:80px 20px;
+            text-align:center;
+        }
+
+        .hero h2{
+            font-size:45px;
+            color:#0059b3;
+            margin-bottom:20px;
+        }
+
+        .hero p{
+            font-size:21px;
+            line-height:1.9;
+            max-width:1000px;
+            margin:auto;
+        }
+
+        /* COURSES */
+
+        .courses{
+            padding:80px 20px;
+            background:#fffef8;
+        }
+
+        .courses h2{
+            text-align:center;
+            font-size:45px;
+            color:#ff6600;
+            margin-bottom:50px;
+        }
+
+        .course-container{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:25px;
+        }
+
+        .course-card{
+            width:250px;
+            padding:30px 20px;
+            border-radius:20px;
+            text-align:center;
+            color:white;
+            transition:0.4s;
+            box-shadow:0 8px 18px rgba(0,0,0,0.15);
+        }
+
+        .course-card:hover{
+            transform:translateY(-10px);
+        }
+
+        .course-card h3{
+            font-size:24px;
+            margin-bottom:15px;
+        }
+
+        .course-card p{
+            font-size:17px;
+            line-height:1.7;
+        }
+
+        /* DIFFERENT COLORS FOR EACH COURSE */
+
+        .c1{
+            background:#4d94ff;
+        }
+
+        .c2{
+            background:#ff9966;
+        }
+
+        .c3{
+            background:#33cc99;
+        }
+
+        .c4{
+            background:#ff6666;
+        }
+
+        .c5{
+            background:#9966ff;
+        }
+
+        .c6{
+            background:#00b8e6;
+        }
+
+        .c7{
+            background:#ff66b3;
+        }
+
+        .c8{
+            background:#66b266;
+        }
+
+        .c9{
+            background:#ffcc00;
+            color:#333;
+        }
+
+        .c10{
+            background:#6699ff;
+        }
+
+        /* EXPERIENCE */
+
+        .experience{
+            background:#e6f2ff;
+            padding:80px 20px;
+            text-align:center;
+        }
+
+        .experience h2{
+            font-size:45px;
+            color:#003366;
+            margin-bottom:20px;
+        }
+
+        .experience p{
+            font-size:22px;
+            line-height:1.9;
+            max-width:1000px;
+            margin:auto;
+        }
+
+        /* DIRECTOR */
+
+        .director{
+            background:#fff0d9;
+            padding:80px 20px;
+            text-align:center;
+        }
+
+        .director h2{
+            font-size:45px;
+            color:#cc6600;
+            margin-bottom:20px;
+        }
+
+        .director p{
+            font-size:26px;
+            line-height:1.8;
+        }
+
+        /* LOCATION */
+
+        .location{
+            background:#e8fff0;
+            padding:80px 20px;
+            text-align:center;
+        }
+
+        .location h2{
+            font-size:45px;
+            color:#00994d;
+            margin-bottom:20px;
+        }
+
+        .location p{
+            font-size:24px;
+        }
+
+        /* JOIN SECTION */
+
+        .join{
+            background:#fff5f5;
+            padding:80px 20px;
+            text-align:center;
+        }
+
+        .join h2{
+            font-size:45px;
+            color:#cc0000;
+            margin-bottom:20px;
+        }
+
+        .join p{
+            font-size:24px;
+            line-height:1.8;
+        }
+
+        .join button{
+            margin-top:25px;
+            padding:15px 35px;
+            font-size:20px;
+            border:none;
+            border-radius:10px;
+            background:#ff6600;
+            color:white;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .join button:hover{
+            background:#e65c00;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:#003366;
+            color:white;
+            text-align:center;
+            padding:25px;
+            font-size:18px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            header h1{
+                font-size:40px;
+            }
+
+            header p,
+            .hero p,
+            .experience p,
+            .join p{
+                font-size:18px;
+            }
+
+            .hero h2,
+            .courses h2,
+            .experience h2,
+            .director h2,
+            .location h2,
+            .join h2{
+                font-size:32px;
+            }
+
+            nav a{
+                display:block;
+                margin:10px 0;
+            }
+
+            .director p,
+            .location p{
+                font-size:20px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>TECH ELITES</h1>
+
+        <p>
+            Innovative Computer Training For Children From Beginner Level.
+            We Provide Quality Education For Children.
+        </p>
+
+    </header>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">Experience</a>
+        <a href="#">Director</a>
+        <a href="#">Location</a>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <h2>Welcome To Tech Elites</h2>
+
+        <p>
+            Tech Elites is a professional computer training institute for children.
+            We teach students using easy practical methods and modern technology.
+            We provide both online and offline classes for beginners.
+        </p>
+
+    </section>
+
+    <!-- COURSES -->
+
+    <section class="courses">
+
+        <h2>Our Course Contents</h2>
+
+        <div class="course-container">
+
+            <div class="course-card c1">
+                <h3>Computer Fundamentals</h3>
+                <p>Learn basic computer knowledge and digital skills.</p>
+            </div>
+
+            <div class="course-card c2">
+                <h3>Text Editors</h3>
+                <p>Practice Notepad, WordPad and typing skills.</p>
+            </div>
+
+            <div class="course-card c3">
+                <h3>Windows</h3>
+                <p>Understand Windows operating system basics.</p>
+            </div>
+
+            <div class="course-card c4">
+                <h3>MS Office</h3>
+                <p>Learn MS Word, Excel and Office applications.</p>
+            </div>
+
+            <div class="course-card c5">
+                <h3>PowerPoint</h3>
+                <p>Create attractive presentations and slides.</p>
+            </div>
+
+            <div class="course-card c6">
+                <h3>HTML</h3>
+                <p>Learn webpage designing and web development.</p>
+            </div>
+
+            <div class="course-card c7">
+                <h3>Google Apps</h3>
+                <p>Learn Gmail, Docs, Drive and online tools.</p>
+            </div>
+
+            <div class="course-card c8">
+                <h3>ChatGPT</h3>
+                <p>Learn modern AI tools and productivity methods.</p>
+            </div>
+
+            <div class="course-card c9">
+                <h3>JAVA</h3>
+                <p>Learn Java programming from beginner level.</p>
+            </div>
+
+            <div class="course-card c10">
+                <h3>Python</h3>
+                <p>Learn Python programming with simple examples.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXPERIENCE -->
+
+    <section class="experience">
+
+        <h2>20 Years Of Experience</h2>
+
+        <p>
+            We have 20 years of experience in programming and computer education.
+            We worked with leading institutes in Hyderabad and trained many students successfully.
+        </p>
+
+    </section>
+
+    <!-- DIRECTOR -->
+
+    <section class="director">
+
+        <h2>Director</h2>
+
+        <p>
+            <strong>Ram K. Gopi</strong><br>
+            Director Of Tech Elites
+        </p>
+
+    </section>
+
+    <!-- LOCATION -->
+
+    <section class="location">
+
+        <h2>Location</h2>
+
+        <p>
+            Near MRF Showroom, Podalada
+        </p>
+
+    </section>
+
+    <!-- JOIN SECTION -->
+
+    <section class="join">
+
+        <h2>Visit Our Institute And Join Now</h2>
+
+        <p>
+            Online And Offline Classes Available.<br>
+            Start Your Computer Learning Journey With Tech Elites Today.
+        </p>
+
+        <button>Join Now</button>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Tech Elites | Innovative Computer Training For Children
+
+    </footer>
+
+</body>
+
+</html>S
